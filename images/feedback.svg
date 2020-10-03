@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1920"
+   height="1080"
+   id="svg4136"
+   version="1.1"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   viewBox="0 0 1920 1080"
+   sodipodi:docname="feedback.svg">
+  <defs
+     id="defs4138">
+    <inkscape:path-effect
+       end_linecap_type="zerowidth"
+       scale_width="1"
+       miter_limit="4"
+       linejoin_type="extrp_arc"
+       start_linecap_type="zerowidth"
+       interpolator_beta="0.2"
+       interpolator_type="CubicBezierJohan"
+       sort_points="true"
+       offset_points="0,5"
+       lpeversion="1"
+       is_visible="true"
+       id="path-effect933"
+       effect="powerstroke" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1336.9676"
+     inkscape:cy="614.65893"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1892"
+     inkscape:window-height="1023"
+     inkscape:window-x="12"
+     inkscape:window-y="12"
+     inkscape:window-maximized="0"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata4141">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Arun Ravindran</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>SVG</rdf:li>
+            <rdf:li>web</rdf:li>
+            <rdf:li>templates</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,312)">
+    <rect
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect994"
+       width="1920.0001"
+       height="1080"
+       x="0"
+       y="-312" />
+    <text
+       id="text1000"
+       y="4.479548"
+       x="249.14568"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.55184px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:0.576008px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:68.4143px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.621928px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.576008px"
+         y="4.479548"
+         x="249.14568"
+         sodipodi:role="line"
+         id="tspan1002">It is one of the best <tspan
+   id="tspan863"
+   style="fill:#f6d4d4;fill-opacity:1;stroke-width:0.576008px">turtorial </tspan>I have ever seen. </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.5112px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:1.11212px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="253.42194"
+       y="138.09325"
+       id="text853"><tspan
+         id="tspan851"
+         sodipodi:role="line"
+         x="253.42194"
+         y="138.09325"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:132.089px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-1.20077px;fill:#e5e5e5;fill-opacity:1;stroke-width:1.11212px">love the opening jokes. </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.63998px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:0.514591px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="249.40472"
+       y="235.91655"
+       id="text857"><tspan
+         id="tspan855"
+         sodipodi:role="line"
+         x="249.40472"
+         y="235.91655"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:61.1194px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.555614px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.514591px">This is mindblowing!  Really like the way you teach!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.62363px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:0.446134px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="249.98056"
+       y="319.40405"
+       id="text861"><tspan
+         id="tspan859"
+         sodipodi:role="line"
+         x="249.98056"
+         y="319.40405"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:52.9888px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.481701px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.446134px">like that you demonstrate the whole development process</tspan></text>
+    <text
+       id="text901"
+       y="402.09222"
+       x="248.74619"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.05606px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:0.609972px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:72.4483px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.6586px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.609972px"
+         y="402.09222"
+         x="248.74619"
+         sodipodi:role="line"
+         id="tspan899">beginner should learn this type of concept. </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.67669px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:0.382353px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="249.70149"
+       y="482.34827"
+       id="text905"><tspan
+         id="tspan915"
+         sodipodi:role="line"
+         x="249.70149"
+         y="482.34827"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:45.4133px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.412835px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.382353px">I've been programming in python for 10 years, but never worked with </tspan><tspan
+         id="tspan919"
+         sodipodi:role="line"
+         x="249.70149"
+         y="536.84424"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:45.4133px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.412835px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.382353px">vectors and images so this is a fun little weekend project for me .</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.23046px;line-height:0%;font-family:'TeX Gyre Adventor';-inkscape-font-specification:'TeX Gyre Adventor, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e5e5e5;fill-opacity:1;stroke:none;stroke-width:0.62172px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="248.95673"
+       y="-172.52599"
+       id="text925"><tspan
+         id="tspan923"
+         sodipodi:role="line"
+         x="248.95673"
+         y="-172.52599"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:73.8436px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.671285px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.62172px">always wanted to do something like this </tspan><tspan
+         id="tspan927"
+         sodipodi:role="line"
+         x="248.95673"
+         y="-83.913666"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:73.8436px;line-height:1.2;font-family:Inter;-inkscape-font-specification:'Inter Bold';letter-spacing:-0.671285px;fill:#e5e5e5;fill-opacity:1;stroke-width:0.62172px">but never had the guide to get me started</tspan></text>
+    <path
+       sodipodi:nodetypes="sssscccsscsssss"
+       transform="translate(0,-312)"
+       d="m 293.43164,50.798828 c -51.91591,0 -93.71094,41.795028 -93.71094,93.710942 V 817.28906 C 199.7207,869.20497 241.51573,911 293.43164,911 H 519.8418 v 125.75 8.6602 l 7.5,-4.3301 c 69.57176,-40.1673 146.22723,-84.42453 222.88281,-128.68166 L 752.64648,911 h 942.99222 c 51.916,0 93.7109,-41.79503 93.7109,-93.71094 V 144.50977 c 0,-51.915914 -41.7949,-93.710942 -93.7109,-93.710942 z"
+       style="fill:none;fill-opacity:1;stroke:#fcaf3e;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       id="rect929" />
+  </g>
+</svg>

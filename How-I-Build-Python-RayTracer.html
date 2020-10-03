@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>How I built a Ray Tracer in Pure Python</title>
+<meta name="author" content="(Arun Ravindran)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js-4.0.2/dist/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js-4.0.2/dist/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js-4.0.2/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section>
+<section id="slide-org5ba8541">
+<h2 id="org5ba8541">How I built a Ray Tracer in Pure Python</h2>
+<p>
+by: Arun Ravindran
+</p>
+
+<aside class="notes">
+<p>
+Talk submission page on <a href="https://in.pycon.org/cfp/2020/proposals/how-i-built-a-ray-tracer-in-pure-python~e045e/">Pycon India</a> site
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgf58d7f0">
+<h2 id="orgf58d7f0">Background</h2>
+<div class="outline-text-2" id="text-orgf58d7f0">
+</div>
+</section>
+<section id="slide-orgc5286f2">
+<h3 id="orgc5286f2">Puray</h3>
+<p>
+6 parts, 12 months, 17K views
+</p>
+
+
+<div id="org8da8a7f" class="figure">
+<p><object type="image/svg+xml" data="./images/puray-qrcode.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+<p>
+<a href="http://bit.ly/puray">http://bit.ly/puray</a>
+</p>
+</section>
+<section id="slide-org6aab33e" data-background="./images/two-balls.png" data-background-size="contain" data-background-transition="slide">
+<h3 id="org6aab33e"></h3>
+</section>
+<section id="slide-orgbaa4eaf" data-background="./images/feedback.svg" data-background-transition="slide">
+<h3 id="orgbaa4eaf"></h3>
+</section>
+</section>
+<section>
+<section id="slide-org3761390">
+<h2 id="org3761390">Overview</h2>
+<ul>
+<li>Motivation</li>
+<li>Implementation Challenges</li>
+<li>Art of Video</li>
+<li>Tools</li>
+<li>Post-mortem</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org49675b8">
+<h2 id="org49675b8">About me</h2>
+
+<div id="org364231d" class="figure">
+<p><img src="./images/arun-portrait.png" alt="arun-portrait.png" width="40%" />
+</p>
+</div>
+
+<p>
+Author, Speaker, Engineer, Products Person, Dad
+</p>
+<aside class="notes">
+<p>
+TODO Add Photo background
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orga7bb686">
+<h2 id="orga7bb686">Project Motivation</h2>
+<aside class="notes">
+<p>
+
+</p>
+
+<p>
+I started working on this ray tracer as a weekend project. The code was ugly. But the output looked beautiful. Someone wanted me to post a tutorial. I replied aren't there too many ray tracing tutorials already? Soon I forgot about it.
+</p>
+
+<p>
+Then I started teaching Kavya my ten year old daughter Python. She asked questions some very fundamental questions that I took for granted. I wanted to recommend her some books but they all assumed you are already a programmer and knew how to break down a problem.
+</p>
+
+<p>
+Python programmers belong to all walks of life. It has becoming the most accessible language to those who do not have a coding background like scientists, teachers, doctors or anybody. So it is important that we continue to help more people join the community.
+</p>
+
+<p>
+Only Python programmers can do that. They do too. There are x number of Python book published every year probably more than any other language, many videos posted and countless blog posts written.
+</p>
+
+<p>
+But there is a problem.
+</p>
+
+<p>
+Python Learning Materials at situated at extremes 
+</p>
+<ul>
+<li>Very basic programming syntax</li>
+<li>Advanced techniques like async or type annotations</li>
+
+</ul>
+
+<p>
+This leaves a big gap in the middle. How does a newcomer progress after understanding the rules of the game? Given a real world programming problem, how do you tackle it? How do the pros do it?
+</p>
+
+<p>
+I was also looking for a fun and enjoyable project. We all know travelling salesman is great computer science problem but no fun to watch. What most people want to know before they spend couple of hours on a series of videos is - "Is it fun?" "Is it cool? (will my friends be impressed when they see this)". So presentation had to be more engaging that a webcam recording of person droning away. More importantly the project had to create something interesting that others can appreciate.
+</p>
+
+<p>
+TODO: I'm a product guy so I think about user behaviour and user retention a lot.
+</p>
+
+<p>
+TODO: Understanding Human Behaviour. Challenge versus easy curve? Fogg Behavior Model. Ability -&gt; Python so it is easy. Motivation -&gt; Cool renders that I can show my friends.
+</p>
+
+</aside>
+</section>
+<section id="slide-orgdff7ef6" data-background="./images/first-tweet.png" data-background-size="contain" data-background-transition="slide">
+<h3 id="orgdff7ef6"></h3>
+
+</section>
+<section id="slide-orgc477f41">
+<h3 id="orgc477f41">Python Learning Materials are of two kinds</h3>
+<ul>
+<li class="fragment appear">Elementary level</li>
+<li class="fragment appear">Advanced level</li>
+
+</ul>
+
+</section>
+<section id="slide-org1bb108a">
+<h3 id="org1bb108a">Intermediate?</h3>
+
+</section>
+<section id="slide-org77a7928">
+<h3 id="org77a7928">What's the problem with most learning content?</h3>
+
+</section>
+<section id="slide-orgef715ba" data-background="./images/fogg-model.jpg" data-background-size="contain" data-background-transition="slide">
+<h3 id="orgef715ba"></h3>
+
+
+</section>
+<section id="slide-orgc9fab37">
+<h3 id="orgc9fab37">Is it Easy? Cool?</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc3bfe18">
+<h2 id="orgc3bfe18">Existing Ray Tracer Implementations</h2>
+<div class="outline-text-2" id="text-orgc3bfe18">
+</div>
+</section>
+<section id="slide-orga157056">
+<h3 id="orga157056">Water, water, everywhere&#x2026;</h3>
+<ul>
+<li><a href="https://github.com/benc-uk/rayscale">https://github.com/benc-uk/rayscale</a></li>
+<li><a href="https://github.com/ssloy/tinyraytracer">https://github.com/ssloy/tinyraytracer</a></li>
+<li><p>
+<a href="https://github.com/NMVHS/PyTracer">https://github.com/NMVHS/PyTracer</a>
+</p>
+
+<aside class="notes">
+<p>
+Why does it have to Pure Python?
+</p>
+<ul>
+<li>Third party libraries introduces a non-trivial amount of topics to study e.g. numpy. This may or may not be Python.</li>
+<li>No need to figure out source of information. You have the Python manual already. Just download a copy offline or run `pydoc3 -b`. Advantage of going offline - less distractions.</li>
+<li>It is really readable. Third party libraries may or may not be Pythonic. Pure Python is.</li>
+<li>Concepts that carry over to any Python project.</li>
+<li>Work at lower layers of abstraction e.g. basic image format. Appreciates what PNG and JPEG files do to reduce file sizes.</li>
+
+</ul>
+
+</aside></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orged5c48c">
+<h2 id="orged5c48c">Challenges in Python</h2>
+<ul>
+<li class="fragment appear">Plenty of Data structures - dicts, classes, slots</li>
+<li class="fragment appear">Need to use shallow OOP</li>
+<li class="fragment appear">Automatic int to float conversions</li>
+<li class="fragment appear"><p>
+🐘 Slow when it is CPU intensive
+</p>
+<aside class="notes">
+<ul>
+<li>Needing to use classes. Did a single file function based version. I wanted to make it pure functions (no state changes) but ended up replicating a lot of data with high memory usage since Python is not lazy.</li>
+
+</ul>
+
+</aside></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5e74d89">
+<h2 id="org5e74d89">Art of Video Presentations</h2>
+<div class="outline-text-2" id="text-org5e74d89">
+</div>
+</section>
+<section id="slide-org2d56dfe">
+<h3 id="org2d56dfe">Process</h3>
+<ul>
+<li class="fragment appear">Coding</li>
+<li class="fragment appear">Script</li>
+<li class="fragment appear">Screen Recording</li>
+<li class="fragment appear">Face Recording</li>
+<li class="fragment appear">Editing</li>
+<li class="fragment appear">Post-production</li>
+<li class="fragment appear">Marketing</li>
+
+</ul>
+</section>
+<section id="slide-orgf2af690">
+<h3 id="orgf2af690">Getting Skilled</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org01bb7da">
+<h2 id="org01bb7da">Structuring and Scripting</h2>
+<div class="outline-text-2" id="text-org01bb7da">
+</div>
+</section>
+<section id="slide-org9a1f824">
+<h3 id="org9a1f824">Keeping them engaged</h3>
+</section>
+<section id="slide-org2a1b661">
+<h3 id="org2a1b661">Each Episode&#x2026;</h3>
+<ul>
+<li>Each part solves a problem.</li>
+<li>Start with problem statement</li>
+<li>Give clues (and tease output)</li>
+<li>Allow them to solve themselves</li>
+<li>Show coding</li>
+<li>Exercises: Something extra to do</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org2a3bf8f">
+<h2 id="org2a3bf8f">Visual Storytelling</h2>
+<div class="outline-text-2" id="text-org2a3bf8f">
+</div>
+</section>
+<section id="slide-org5c32013">
+<h3 id="org5c32013">Make use of the medium</h3>
+<p>
+Video is not a narrated blog post.
+</p>
+</section>
+<section id="slide-org6d98c64">
+<h3 id="org6d98c64">Find novelty</h3>
+</section>
+</section>
+<section>
+<section id="slide-org38593e0">
+<h2 id="org38593e0">Tools and Technologies</h2>
+<div class="outline-text-2" id="text-org38593e0">
+</div>
+</section>
+<section id="slide-org5262a05">
+<h3 id="org5262a05">Gone are the days of a simple screen recording or screencasts.</h3>
+</section>
+<section id="slide-orgca1a3fe">
+<h3 id="orgca1a3fe">Start Simple</h3>
+</section>
+<section id="slide-org3779329">
+<h3 id="org3779329">Hardware I used</h3>
+<ul>
+<li>SLR Camera</li>
+<li>Tripod</li>
+<li>Webcam</li>
+<li>USB Mic</li>
+<li>Lavalier mic</li>
+<li>Lighting</li>
+
+</ul>
+</section>
+<section id="slide-org144ead9">
+<h3 id="org144ead9">Software I used</h3>
+<ul>
+<li>OBS Studio</li>
+<li>KDEnlive</li>
+<li>Inkscape</li>
+<li>GIMP</li>
+<li>Blender</li>
+<li>IP Cam</li>
+<li>&#x2026;Python</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org62e70b5">
+<h2 id="org62e70b5">Reaching the Audience</h2>
+<ul>
+<li>Reddit</li>
+<li>Hacker News</li>
+<li>Twitter</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org63dbd10">
+<h2 id="org63dbd10">Project Post-mortem</h2>
+<ul>
+<li class="fragment appear">✓ Showing Mistakes</li>
+<li class="fragment appear">✓ Finding a Niche / Timing</li>
+<li class="fragment appear">❌ Delay between episodes</li>
+<li class="fragment appear">❌ Bonus content</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1151100">
+<h2 id="org1151100">Takeaway</h2>
+<blockquote >
+<p>
+"If you can't explain something to a first year student, then you haven't really understood."
+</p>
+
+<p>
+&#x2013; Richard P. Feynman
+</p>
+</blockquote>
+</section>
+</section>
+<section>
+<section id="slide-org0b3191f">
+<h2 id="org0b3191f">Questions?</h2>
+<aside class="notes">
+<p>
+Feedback from Vipul and Prakash
+</p>
+<ul>
+<li>Reduce duration from 40 mins to 30 mins</li>
+<li>Bigger sized images</li>
+<li>More images?</li>
+
+</ul>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org56e4614">
+<h2 id="org56e4614">Connect with Me</h2>
+<ul>
+<li>Web: <a href="https://arunrocks.com">arunrocks.com</a></li>
+<li>Twitter: <a href="https://twitter.com/arocks">twitter.com/arocks</a></li>
+<li>YouTube: 
+<ul>
+<li><a href="https://www.youtube.com/c/ArunRavindranRocks/">youtube.com/c/ArunRavindranRocks/</a></li>
+
+</ul></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js-4.0.2/dist/reveal.js"></script>
+<script src="./reveal.js-4.0.2/plugin/markdown/markdown.js"></script>
+<script src="./reveal.js-4.0.2/plugin/zoom/zoom.js"></script>
+<script src="./reveal.js-4.0.2/plugin/notes/notes.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealMarkdown,RevealZoom,RevealNotes],
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+]
+});
+</script>
+</body>
+</html>
