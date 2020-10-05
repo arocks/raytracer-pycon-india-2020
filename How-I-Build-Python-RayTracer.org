@@ -1,0 +1,196 @@
+#+OPTIONS: num:nil toc:nil
+#+STARTUP: inlineimages
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: night
+#+Title: How I built a Ray Tracer in Pure Python
+#+Author: Arun Ravindran
+#+Email: arunvr@gmail.com
+* How I built a Ray Tracer in Pure Python
+by: Arun Ravindran
+
+#+begin_notes
+  Talk submission page on [[https://in.pycon.org/cfp/2020/proposals/how-i-built-a-ray-tracer-in-pure-python~e045e/][Pycon India]] site
+#+end_notes
+* Background
+** Puray
+ 6 parts, 12 months, 17K views
+
+ [[./images/puray-qrcode.svg]]
+
+http://bit.ly/puray
+** 
+    :PROPERTIES:
+    :reveal_background: ./images/two-balls.png
+    :reveal_background_size: contain
+    :reveal_background_trans: slide
+    :END:
+** 
+    :PROPERTIES:
+    :reveal_background: ./images/feedback.svg
+    :reveal_background_trans: slide
+    :END:
+* Overview
+- Motivation
+- Implementation Challenges
+- Art of Video
+- Tools
+- Post-mortem
+* About me
+
+  #+ATTR_HTML: :width 40%
+  [[./images/arun-portrait.png]]
+
+Author, Speaker, Engineer, Products Person, Dad
+#+begin_notes
+  TODO Add Photo background
+#+end_notes
+* Project Motivation
+ #+begin_notes
+
+ I started working on this ray tracer as a weekend project. The code was ugly. But the output looked beautiful. Someone wanted me to post a tutorial. I replied aren't there too many ray tracing tutorials already? Soon I forgot about it.
+
+ Then I started teaching Kavya my ten year old daughter Python. She asked questions some very fundamental questions that I took for granted. I wanted to recommend her some books but they all assumed you are already a programmer and knew how to break down a problem.
+
+ Python programmers belong to all walks of life. It has becoming the most accessible language to those who do not have a coding background like scientists, teachers, doctors or anybody. So it is important that we continue to help more people join the community.
+
+ Only Python programmers can do that. They do too. There are x number of Python book published every year probably more than any other language, many videos posted and countless blog posts written.
+
+ But there is a problem.
+
+   Python Learning Materials at situated at extremes 
+ - Very basic programming syntax
+ - Advanced techniques like async or type annotations
+
+ This leaves a big gap in the middle. How does a newcomer progress after understanding the rules of the game? Given a real world programming problem, how do you tackle it? How do the pros do it?
+
+ I was also looking for a fun and enjoyable project. We all know travelling salesman is great computer science problem but no fun to watch. What most people want to know before they spend couple of hours on a series of videos is - "Is it fun?" "Is it cool? (will my friends be impressed when they see this)". So presentation had to be more engaging that a webcam recording of person droning away. More importantly the project had to create something interesting that others can appreciate.
+
+ TODO: I'm a product guy so I think about user behaviour and user retention a lot.
+
+ TODO: Understanding Human Behaviour. Challenge versus easy curve? Fogg Behavior Model. Ability -> Python so it is easy. Motivation -> Cool renders that I can show my friends.
+
+ #+end_notes
+** 
+    :PROPERTIES:
+    :reveal_background: ./images/first-tweet.png
+    :reveal_background_size: contain
+    :reveal_background_trans: slide
+    :END:
+    
+** Python Learning Materials are of two kinds
+#+ATTR_REVEAL: :frag (appear)
+- Elementary level
+- Advanced level
+
+** Intermediate?
+
+** What's the problem with most learning content?
+
+** 
+    :PROPERTIES:
+    :reveal_background: ./images/fogg-model.jpg
+    :reveal_background_size: contain
+    :reveal_background_trans: slide
+    :END:
+
+
+** Is it Easy? Cool?
+
+* Existing Ray Tracer Implementations
+
+** Water, water, everywhere...
+- https://github.com/benc-uk/rayscale
+- https://github.com/ssloy/tinyraytracer
+- https://github.com/NMVHS/PyTracer
+
+ #+begin_notes
+ Why does it have to Pure Python?
+ - Third party libraries introduces a non-trivial amount of topics to study e.g. numpy. This may or may not be Python.
+ - Python Typosquatting
+ - No need to figure out source of information. You have the Python manual already. Just download a copy offline or run `pydoc3 -b`. Advantage of going offline - less distractions.
+ - It is really readable. Third party libraries may or may not be Pythonic. Pure Python is.
+ - Concepts that carry over to any Python project.
+ - Work at lower layers of abstraction e.g. basic image format. Appreciates what PNG and JPEG files do to reduce file sizes.
+ #+end_notes
+* Challenges in Python
+#+ATTR_REVEAL: :frag (appear)
+- Plenty of Data structures - dicts, classes, slots
+- Need to use shallow OOP
+- Automatic int to float conversions
+- 🐘 Slow when it is CPU intensive
+ #+begin_notes
+ - Needing to use classes. Did a single file function based version. I wanted to make it pure functions (no state changes) but ended up replicating a lot of data with high memory usage since Python is not lazy.
+ #+end_notes
+* Art of Video Presentations
+** Process
+#+ATTR_REVEAL: :frag (appear)
+- Coding
+- Script
+- Screen Recording
+- Face Recording
+- Editing
+- Post-production
+- Marketing
+** Getting Skilled
+
+* Structuring and Scripting
+
+** Keeping them engaged
+** Each Episode...
+- Each part solves a problem. 
+- Start with problem statement
+- Give clues (and tease output)
+- Allow them to solve themselves
+- Show coding
+- Exercises: Something extra to do
+
+* Visual Storytelling
+** Make use of the medium
+Video is not a narrated blog post.
+** Find novelty
+* Tools and Technologies
+** Gone are the days of a simple screen recording or screencasts.
+** Start Simple
+** Hardware I used
+- SLR Camera
+- Tripod
+- Webcam
+- USB Mic
+- Lavalier mic
+- Lighting
+** Software I used
+- OBS Studio
+- KDEnlive
+- Inkscape
+- GIMP
+- Blender
+- IP Cam
+- ...Python
+* Reaching the Audience
+- Reddit
+- Hacker News
+- Twitter
+* Project Post-mortem
+#+ATTR_REVEAL: :frag (appear)
+- ✓ Showing Mistakes
+- ✓ Finding a Niche / Timing
+- ❌ Delay between episodes
+- ❌ Bonus content
+* Takeaway
+  #+begin_quote
+  "If you can't explain something to a first year student, then you haven't really understood."
+  
+-- Richard P. Feynman
+  #+end_quote
+* Questions?
+#+begin_notes
+Feedback from Vipul and Prakash
+- Reduce duration from 40 mins to 30 mins
+- Bigger sized images
+- More images?
+#+end_notes
+* Connect with Me
+- Web: [[https://arunrocks.com][arunrocks.com]]
+- Twitter: [[https://twitter.com/arocks][twitter.com/arocks]]
+- YouTube: 
+  - [[https://www.youtube.com/c/ArunRavindranRocks/][youtube.com/c/ArunRavindranRocks/]]
